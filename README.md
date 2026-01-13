@@ -43,6 +43,26 @@ make
 ## Input format
 - **Mode 0**: each line has `xy xz yz`.
 - **Mode 1**: each line has `xx yy zz xy xz yz` (normal components first).
+**Mode 0 (3 components)**   
+The time-domain modulus is computed from the average of the three shear autocorrelation functions:
+
+
+```
+G(t) = (V / kBT) * ( <σ_xy(0)σ_xy(t)> + <σ_xz(0)σ_xz(t)> + <σ_yz(0)σ_yz(t)> ) / 3
+```
+
+Use Mode 0 when your input file only contains shear stresses.
+
+**Mode 1 (6 components)**  
+The time-domain modulus is computed from both normal and shear components with weighting:
+
+
+```
+G(t) = (V / kBT) * ( <σ_xx(0)σ_xx(t)> + <σ_yy(0)σ_yy(t)> + <σ_zz(0)σ_zz(t)> ) / 30
+     + (V / kBT) * ( <σ_xy(0)σ_xy(t)> + <σ_xz(0)σ_xz(t)> + <σ_yz(0)σ_yz(t)> ) / 5
+```
+
+Use Mode 1 when you have full stress tensor components and want the isotropic average.
 
 ## Output format
 - **G(t)**: `time  Gt`
