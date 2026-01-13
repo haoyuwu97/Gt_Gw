@@ -44,7 +44,7 @@ make
 **Mode 0 (3 components)**   
 The time-domain modulus is computed from the average of the three shear autocorrelation functions:
 ```math
-G(t)=\frac{V}{kBT}\frac{<\sgima_{xy}(0)\sigma_{xy}(t)>+<\sigma_{xz}(0)\sigma_{xz}(t)>+<\sigma_{yz}(0)\sigma_{yz}(t)>}{3}
+G(t)=\frac{V}{kBT}\frac{<\sigma_{xy}(0)\sigma_{xy}(t)>+<\sigma_{xz}(0)\sigma_{xz}(t)>+<\sigma_{yz}(0)\sigma_{yz}(t)>}{3}
 ```
 Use Mode 0 when your input file only contains shear stresses.
 
