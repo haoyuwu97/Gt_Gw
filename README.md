@@ -44,14 +44,14 @@ make
 **Mode 0 (3 components)**   
 The time-domain modulus is computed from the average of the three shear autocorrelation functions:
 ```math
-G(t)=\frac{V}{kBT}\frac{<\sgima_xy(0)\sigma_xy(t)>+<\sigma_xz(0)\sigma_xz(t)>+<\sigma_yz(0)\sigma_yz(t)>}{3}
+G(t)=\frac{V}{kBT}\frac{<\sgima_{xy}(0)\sigma_{xy}(t)>+<\sigma_{xz}(0)\sigma_{xz}(t)>+<\sigma_{yz}(0)\sigma_{yz}(t)>}{3}
 ```
 Use Mode 0 when your input file only contains shear stresses.
 
 **Mode 1 (6 components)**  
 The time-domain modulus is computed from both normal and shear components with weighting:
 ```math
-G(t)=\frac{V}{kBT}\left(\frac{<\sigma_xx(0)\sigma_xx(t)>+<\sigma_yy(0)\sigma_yy(t)>+<\sigma_zz(0)\sigma_zz(t)>}{30}+\frac{<\sigma_xy(0)\sigma_xy(t)>+<\sigma_xz(0)\sigma_xz(t)>+<\sigma_yz(0)\sigma_yz(t)>}{5}\right)
+G(t)=\frac{V}{kBT}\left(\frac{<\sigma_{xx}(0)\sigma_{xx}(t)>+<\sigma_{yy}(0)\sigma_{yy}(t)>+<\sigma_{zz}(0)\sigma_{zz}(t)>}{30}+\frac{<\sigma_{xy}(0)\sigma_{xy}(t)>+<\sigma_{xz}(0)\sigma_{xz}(t)>+<\sigma_{yz}(0)\sigma_{yz}(t)>}{5}\right)
 ```
 Use Mode 1 when you have full stress tensor components and want the isotropic average.
 
